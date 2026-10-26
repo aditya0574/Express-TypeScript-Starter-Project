@@ -3,7 +3,7 @@ import { serverConfig } from './config';
 import { pingHandler } from './controllers/ping.controller';
 import pingRouter from './routers/v1/ping.router';
 import v1Router from './routers/v1/index.router';
-import v2Router from './routers/v1/v2/index.router';
+import v2Router from './routers/v2/index.router';
 const app = express();
 
 /**
@@ -19,6 +19,6 @@ console.log("Environment variable loaded");
 
 app.listen(serverConfig.PORT, () => {
     console.log(`Server is running on http://localhost:${serverConfig.PORT}`);
-    console.log(`Press Ctrl+C to stop the server`);
+    console.log(`Press Ctrl+C to stop the server.`);
     console.log(process.env.SERVER_NAME);
 });
